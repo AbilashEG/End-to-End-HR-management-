@@ -7,7 +7,6 @@ An AI-powered HR Interview Management System built with **Flask** and integrated
 <img width="1802" height="979" alt="image" src="https://github.com/user-attachments/assets/c184dc2b-e385-4a06-b4f2-a204f22cfd53" />
 <img width="1312" height="759" alt="image" src="https://github.com/user-attachments/assets/2b5549df-8d44-499d-9ea3-59d17b05a4c2" />
 <img width="1886" height="962" alt="image" src="https://github.com/user-attachments/assets/4d014e5e-a530-459c-bc18-663d50abe9be" />
-<img width="1891" height="891" alt="image" src="https://github.com/user-attachments/assets/d82ffee8-add7-4b0b-ae46-2e83a749b7db" />
 <img width="1638" height="969" alt="image" src="https://github.com/user-attachments/assets/0e907dd2-abc4-4b9a-8143-899fa09c6636" />
 <img width="1502" height="779" alt="image" src="https://github.com/user-attachments/assets/ab185dec-d1fe-46be-a115-69ab36cafa4f" />
 
