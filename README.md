@@ -76,13 +76,7 @@ pip install -r requirements.txt
 # Run the Flask app
 python app.py
 ouput
-<img width="1802" height="979" alt="image" src="https://github.com/user-attachments/assets/6a57ed90-5817-45d8-8b0a-fdcc482f7b64" />
-<img width="1312" height="759" alt="image" src="https://github.com/user-attachments/assets/c18878ed-7208-4124-8ae6-a6902ab185ab" />
-<img width="1886" height="962" alt="image" src="https://github.com/user-attachments/assets/2c33cc9e-7b9f-42f7-891a-40e68e976378" />
-<img width="1891" height="891" alt="image" src="https://github.com/user-attachments/assets/e9cb5066-0462-4177-83f8-1328be452277" />
-<img width="1638" height="969" alt="image" src="https://github.com/user-attachments/assets/b1b93140-3b56-4673-8620-566fdbffc045" />
-<img width="1891" height="891" alt="image" src="https://github.com/user-attachments/assets/487ce57f-3efc-4dde-8d23-4ba5ec5878aa" />
-<img width="1502" height="779" alt="image" src="https://github.com/user-attachments/assets/1685cc8b-a295-4a39-b847-34dfda25a7bb" />
+<img width="1802" height="979" alt="image" src="https://github.com/user-attachments/assets/698042af-aef1-4eb2-9fc9-e2a11e818946" />
 
 
 
