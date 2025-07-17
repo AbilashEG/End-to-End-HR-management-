@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartHR Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-700 to-pink-500 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-10 rounded-2xl shadow-2xl max-w-md w-full text-center fade-in-up">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Smart HR</h1>
+    <p class="text-sm text-gray-600 mb-6">AI-powered Interview Management System</p>
+    
+    <a href="/login">
+      <button class="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-full font-semibold text-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        Login with Cognito
+      </button>
+    </a>
+
+    <p class="text-xs text-gray-400 mt-6">Secured by AWS Cognito</p>
+  </div>
+
+</body>
+</html>

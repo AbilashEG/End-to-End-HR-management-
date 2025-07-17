@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Candidate Interview Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      overflow-x: hidden;
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 60px auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      color: white;
+      animation: slideUp 0.8s ease;
+    }
+
+    h3, h4 {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .btn-secondary {
+      border-radius: 30px;
+      font-weight: 500;
+      background-color: #6c757d;
+      border: none;
+      padding: 10px 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+      transform: scale(1.05);
+    }
+
+    a.text-primary {
+      color: #cce0ff !important;
+      font-weight: 500;
+    }
+
+    .resume-link {
+      font-weight: 600;
+      color: #aad4ff;
+      text-decoration: underline;
+    }
+
+    .resume-link:hover {
+      color: #e0f0ff;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌌 Star Background -->
+  <div id="tsparticles"></div>
+
+  <div class="container">
+    <div class="glass-card">
+      <h3>👤 Candidate: <strong>{{ candidate.name }}</strong> ({{ candidate.email }})</h3>
+      <p><strong>📞 Phone:</strong> {{ candidate.phone }}</p>
+      <p><strong>📄 Resume:</strong>
+        {% if candidate.resume_key %}
+          <a href="{{ url_for('download_resume', filename=candidate.resume_key) }}" target="_blank" rel="noopener noreferrer" class="resume-link">
+            View / Download Resume
+          </a>
+        {% else %}
+          <span class="text-warning">⚠️ No Resume Available</span>
+        {% endif %}
+      </p>
+      <p><strong>🕒 Last Updated:</strong> {{ last_updated or "N/A" }}</p>
+    </div>
+
+    {% if technical %}
+    <div class="glass-card">
+      <h4>🛠️ Technical Interview Questions</h4>
+      <ol>
+        {% for q in technical %}
+          <li>{{ q }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+
+    {% if behavioral %}
+    <div class="glass-card">
+      <h4>🤝 Behavioral Interview Questions</h4>
+      <ol start="{{ technical|length + 1 }}">
+        {% for q in behavioral %}
+          <li>{{ q[2:] if q[1:3].isdigit() else q }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+      <a href="{{ url_for('view_candidates') }}" class="btn btn-secondary">⬅ Back to Candidate List</a>
+    </div>
+  </div>
+
+  <!-- ✨ Star Animation Config -->
+  <script>
+    tsParticles.load("tsparticles", {
+      background: {
+        color: { value: "#0d47a1" }
+      },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 80, density: { enable: true, area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: { min: 1, max: 3 } },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          outModes: "bounce"
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 }
+        }
+      },
+      detectRetina: true
+    });
+  </script>
+</body>
+</html>
