@@ -77,7 +77,12 @@ pip install -r requirements.txt
 python app.py
 output
 
-<img width="1802" height="979" alt="Screenshot 2025-07-17 124840" src="https://github.com/user-attachments/assets/4d7769d6-d60b-40e6-a165-a3192ccb19f8" />
+
+---
+
+
+## ✨ Screenshots
+<img width="1802" height="979" alt="image" src="https://github.com/user-attachments/assets/f3e48442-9ff8-49d2-b67d-9de4baed6126" />
 
 
 
