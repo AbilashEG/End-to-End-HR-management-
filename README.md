@@ -75,8 +75,10 @@ pip install -r requirements.txt
 
 # Run the Flask app
 python app.py
-ouput
-<img width="1802" height="979" alt="image" src="https://github.com/user-attachments/assets/698042af-aef1-4eb2-9fc9-e2a11e818946" />
+output
+
+<img width="1802" height="979" alt="Screenshot 2025-07-17 124840" src="https://github.com/user-attachments/assets/4d7769d6-d60b-40e6-a165-a3192ccb19f8" />
+
 
 
 
